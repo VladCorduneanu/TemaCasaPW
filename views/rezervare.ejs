@@ -29,10 +29,29 @@
     </nav>
 
     <main id = "continut">
-        <form>
-            <% for(var i = 0;i < lista.length;++i){ %>
-            <p><%= lista[i].titlu %></p>
+        <form action="/rezervare.html" method="post" id = "RezervareForm"> 
+            <label>Filmul Dumneavoastra</label>
+            <input type="text" id="film" name="film" value = "<%= film.titlu %>" readonly>
+            <br>
+            <label>Numele dumneavoastra</label>
+            <input type="text" id="nume" name="nume" value = "">
+            <br>
+
+
+
+            <% for(var i = 0;i < film.locuri.length;++i){
+                var rand = film.locuri[i];    
+                for(var j = 0;j < rand.locuri.length;++j){
+                    var loc = rand.locuri[j];    
+                %>
+            <input value = "<%=i+' '+j%>" type = "checkbox" id = "<%=i+' '+j%>" name="locuri[]" onclick = "buttonClicked('<%= i %>','<%= j %>')" <%= loc.ocupat ? 'disabled' : ''%>> <%= loc.numar %></button>
+            
             <% } %>
+            <br>
+            <% } %>
+
+            <input type=submit >
+            
         </form>
             
     </main>

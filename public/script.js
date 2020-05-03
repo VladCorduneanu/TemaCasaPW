@@ -29,3 +29,29 @@ function schimbaContinut(resursa,jsFisier = false,jsFunctie = false)
   xmlhttp.open("GET",resursa + '.html', true);
   xmlhttp.send();
 }
+
+function submitFormFilm(numeFilm)
+{
+    document.getElementById('filme').value = numeFilm;
+    document.getElementById("FilmeForm").submit();
+    alert("your form submitted");
+}
+
+function submitFormRezervare()
+{
+    document.getElementById("RezervareForm").submit();
+    alert("your form submitted");
+}
+
+function buttonClicked(i,j)
+{
+    var buton = document.getElementById(i + ' ' + j)
+    
+    console.log(buton.id);
+    console.log(buton.value);
+}
+
+function myFunction()
+{
+    console.log("am facut click")
+}

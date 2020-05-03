@@ -23,16 +23,20 @@
 
     <nav>
         <hr />
-        <a onclick="schimbaContinut('acasa')">Acasă</a>
-        &nbsp;&nbsp;
-        <a onclick="schimbaContinut('filme')">Filme</a>
+        <a onclick="window.location.href='/'">Inapoi</a>
         &nbsp;&nbsp;
         <hr />
     </nav>
 
     <main id = "continut">
-        <p>Bine ati venit la Cinema WEBTASTIC!</p>
-        <p>Pe pagina noastra va puteti rezerva bilete la cele mai noi filme ce se ruleaza la sala de cinema WEBTASTIC situata in MegaMall Iasi</p>
+        <p>Ora realizarii rezervarii: <%=ora%></p>
+        <p>Numele Rezervarii: <%= locuri[0].nume %></p>
+        <p>Filmul: <%= film.titlu %></p>
+        <p>Data si Ora: <%= film.data %>  <%= film.ora %></p>
+        <p>Locurile: <br><% for(var i =0;i< locuri.length;++i){ %> R:<%=locuri[i].rand%> L:<%=locuri[i].numar %> <br/><% } %> 
+
+        </p>
+            
     </main>
 
     <footer>
