@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="ro-RO">
+
+<head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+    <meta content="utf-8" http-equiv="encoding">
+    <title>SiteVlad</title>
+    <link rel = "stylesheet" type="text/css" href="still.css">
+    <link rel="icon" href="/favicon.png">
+    <script src="script.js" type="application/javascript"></script>
+</head>
+<script>
+</script>
+
+<body>
+    <header>
+        <h1>
+            <img alt="nu e imag" src="logo.png" height=147>
+            Cinema WEBTASTIC
+        </h1>
+    </header>
+
+    <nav>
+        <hr />
+        <a onclick="schimbaContinut('acasa')">Acasă</a>
+        &nbsp;&nbsp;
+        <a onclick="schimbaContinut('filme')">Filme</a>
+        &nbsp;&nbsp;
+        <hr />
+    </nav>
+
+    <main id = "continut">
+            <%- maine -%>
+    </main>
+
+    <footer>
+        <br/>
+        <hr />
+        ©.2020.Programare web
+    </footer>
+
+</body>
+
+</html>

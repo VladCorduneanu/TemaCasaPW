@@ -1,0 +1,60 @@
+@charset "UTF-8";
+body {
+    font-size: 15px;
+    background-color: rebeccapurple;
+}
+
+h1{
+    font-size: 20px;
+    background-color:palevioletred;
+    font-size: 50px;
+    border: 10px solid salmon;
+    font-family: cursive;
+    text-align: left;
+}
+
+nav{
+    text-align: center;
+    font-family: cursive;
+    background-color: salmon;
+    font-size:30px;
+}
+
+nav a:hover{
+    color:red;
+    border:solid;
+    border-radius: 2px;
+
+}
+nav a{
+    color:white;
+    border:solid;
+    border-radius: 15px;
+    background-color: palevioletred;
+}
+body p::first-letter{
+    color:red;
+}
+body p{
+    font-family:'Courier New', Courier, monospace;
+    color:white;
+}
+body{
+    font-family:'Courier New', Courier, monospace;
+    color: white;
+}
+form label{
+    min-width: 300px;
+    display: inline-block;
+    font-family: fantasy;
+}
+body table{
+    border-color: salmon;
+    border-width: 2px;
+}
+body table td{
+    min-width: 50px;
+}
+main a {
+    color:white;
+}
