@@ -31,11 +31,13 @@
     <main id = "continut">
         <form action="/rezervare.html" method="post" id = "RezervareForm"> 
             <label>Filmul Dumneavoastra</label>
-            <input type="text" id="film" name="film" value = "<%= film.titlu %>" readonly>
-            <br>
-            <label>Numele dumneavoastra</label>
-            <input type="text" id="nume" name="nume" value = "">
-            <br>
+            <input class="inputFilm" type="text" id="film" name="film" value = "<%= film.titlu %>" readonly>
+            <br/>
+            <br/>
+            <label>Numele Dumneavoastra</label>
+            <input class="inputNume" type="text" id="nume" name="nume" value = "">
+            <br/>
+            <br/>
 
 
 
@@ -44,13 +46,16 @@
                 for(var j = 0;j < rand.locuri.length;++j){
                     var loc = rand.locuri[j];    
                 %>
-            <input value = "<%=i+' '+j%>" type = "checkbox" id = "<%=i+' '+j%>" name="locuri[]" onclick = "buttonClicked('<%= i %>','<%= j %>')" <%= loc.ocupat ? 'disabled' : ''%>> <%= loc.numar %></button>
-            
+                <label class="container"><%= loc.numar %>
+                    <input value = "<%=i+' '+j%>" type = "checkbox" id = "<%=i+' '+j%>" name="locuri[]" onclick = "buttonClicked('<%= i %>','<%= j %>')" <%= loc.ocupat ? 'disabled' : ''%> >
+                    <span class="checkmark"></span>
+                </label>
             <% } %>
-            <br>
+            <br/>
+            <br/>
             <% } %>
 
-            <input type=submit >
+            <input class="buttonRezerva" type=submit value="Rezerva">
             
         </form>
             

@@ -1,6 +1,19 @@
+<ul class="Film">
 <% for(var i = 0;i < lista.length;++i){ %>
-    <p><a onclick="submitFormFilm('<%=lista[i].titlu %>')"> <%= lista[i].titlu %> </a></p>
+    <li class="Film">
+        <img src="<%= lista[i].img %>" alt="lista[i].img" onclick="submitFormFilm('<%=lista[i].titlu %>')" class="IMGFilm">
+        <br/>
+        <a onclick="submitFormFilm('<%=lista[i].titlu %>')"> <%= lista[i].titlu %> </a>
+        <br/>
+        <text>Durata: <%= lista[i].durata %></text>
+        <br/>
+        <text>Descriere: <%= lista[i].descriere %></text>
+        <br/>
+        <text>Data: <%= lista[i].data %></text>
+    </li>
+    <br/>
 <% } %>
+</ul>
 <form action="/filme.html" method="post" id = "FilmeForm"> 
     <select id="filme" name="Filme" hidden>
         <% for(var i = 0;i < lista.length;++i){ %>

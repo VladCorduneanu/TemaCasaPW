@@ -20,41 +20,183 @@ nav{
     font-size:30px;
 }
 
-nav a:hover{
-    color:red;
-    border:solid;
-    border-radius: 2px;
-
-}
-nav a{
-    color:white;
-    border:solid;
-    border-radius: 15px;
-    background-color: palevioletred;
-}
-body p::first-letter{
-    color:red;
-}
 body p{
-    font-family:'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
     color:white;
+    font-size: large;
+}
+body h5{
+    font-family:'Arial, Helvetica, sans-serif';
+    color:white;
+    font-size: medium;
 }
 body{
-    font-family:'Courier New', Courier, monospace;
+    font-family:'Arial, Helvetica, sans-serif';
     color: white;
 }
-form label{
-    min-width: 300px;
-    display: inline-block;
-    font-family: fantasy;
-}
-body table{
-    border-color: salmon;
-    border-width: 2px;
-}
-body table td{
-    min-width: 50px;
+
+img.IMGAcasa{
+    width:400px;
+    height: 300px;
 }
 main a {
     color:white;
+    cursor: pointer;
+}
+img.IMGFilm{
+    width:200px;
+    height: 200px;
+    align-self: auto;
+    cursor: pointer;
+}
+
+
+
+ 
+ .container {
+    display: inline;
+    position: relative;
+    padding-left: 35px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  .container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+  }
+  
+  .container:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .container input:checked ~ .checkmark {
+    background-color: green;
+  }
+
+  .container input:disabled ~ .checkmark {
+    background-color: red;
+  }
+
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+  }
+  
+  .inputFilm{
+    
+        background: transparent;
+        border: none;
+        border-bottom: 1px dashed rgb(255, 255, 255);
+        width: 275px;
+        outline: none;
+        padding: 0px 0px 0px 0px;
+        font-style: italic;
+        font-size: large;
+        color: white;
+        cursor: text;
+    
+  }
+  .inputNume{
+    
+    background: white;
+    border: mintcream;
+    width: 275px;
+    outline: none;
+    padding: 0px 0px 0px 0px;
+    font-style: italic;
+    font-size: large;
+    color: black;
+    cursor: text;
+
+}
+
+.buttonRezerva{
+    display:inline-block;
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:rgb(0, 0, 0);
+    text-align:center;
+    transition: all 0.2s;
+}
+.buttonRezerva:hover{
+    color:#d11212;
+    background-color:#FFFFFF;
+    }
+
+@media all and (max-width:30em){
+     .buttonRezerva{
+    display:block;
+    margin:0.4em auto;
+    }
+}
+
+
+
+nav a{
+    display:inline-block;
+    padding:0.5em 3em;
+    border:0.16em solid #FFFFFF;
+    margin:0 0.3em 0.3em 0;
+    box-sizing: border-box;
+    text-decoration:none;
+    text-transform:uppercase;
+    font-family:'Roboto',sans-serif;
+    font-weight:400;
+    color:#FFFFFF;
+    text-align:center;
+    transition: all 0.15s;
+    }
+nav a:hover{
+    color:rgb(197, 89, 89);
+    border-color:rgb(197, 89, 89);
+    }
+nav a:active{
+    color:#BBBBBB;
+    border-color:#BBBBBB;
+    }
+@media all and (max-width:30em){
+    nav a{
+        display:block;
+        margin:0.4em auto;
+    }
 }
