@@ -17,7 +17,17 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 
-listaFilme =[]; 
+listaFilme =[];
+
+app.get('/ScriereJSON', (req, res) => {
+	eval(fs.readFileSync('ScriereJSON.js')+'');
+	res.redirect('/');
+})
+
+app.get('/ResetJSON', (req, res) => {
+	eval(fs.readFileSync('ResetJSON.js')+'');
+	res.redirect('/');
+})
 
 app.get('/', (req, res) => {
 	mainText = "Hello World"

@@ -34,13 +34,11 @@ function submitFormFilm(numeFilm)
 {
     document.getElementById('filme').value = numeFilm;
     document.getElementById("FilmeForm").submit();
-    alert("your form submitted");
 }
 
 function submitFormRezervare()
 {
     document.getElementById("RezervareForm").submit();
-    alert("your form submitted");
 }
 
 function buttonClicked(i,j)
